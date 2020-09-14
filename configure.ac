@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([super-awesome-casm-usage], [0.0.0], [youremail@here])
+AC_INIT([site-descriptors], [0.0.0], [anirudh@ucsb.edu])
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_AUX_DIR([build-aux])
@@ -10,9 +10,6 @@ AC_CONFIG_MACRO_DIR([build-aux/m4])
 AM_INIT_AUTOMAKE([subdir-objects])
 
 AC_PROG_RANLIB
-
-#Allow renaming programs
-AC_ARG_PROGRAM
 
 # Checks for programs.
 AC_PROG_CXX
