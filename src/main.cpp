@@ -24,7 +24,7 @@ jsonParser correlations_mat_local(const ConfigDoF &configdof, const Supercell &s
   for(int v = 0; v < scel.num_sites(); v++) {
     b_idx[v] = scel.get_b(v);
     //Point the Clexulator to the right neighborhood
-    clexulator.set_nlist(scel.nlist().sites(v).data());
+    clexulator.set_nlist(scel.nlist().sites(scel.nlist().unitcell_index(v)).data());
     //Fill up contributions
     clexulator.calc_point_corr(scel.get_b(v),tcorr.data());
     correlations_mat.col(v) = tcorr;
