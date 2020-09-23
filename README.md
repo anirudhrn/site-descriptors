@@ -1,8 +1,9 @@
 # site-descriptor
 
 This program provides an interface into the [```CASM```](https://github.com/prisms-center/CASMcode) software package to calculate site-centric configurational descriptors. Site-centric configurational descriptors are calculated as :
-<img src="https://latex.codecogs.com/gif.latex?G^{i}_{\delta}&space;=&space;\left(\frac{\sum_{\alpha\in\Omega_{\delta}^{j}}\prod_{i\in\alpha}&space;\sigma_{i}}{m_{\Omega_{\delta}^{j}}}\right)" title="G^{i}_{\delta} = \left(\frac{\sum_{\alpha\in\Omega_{\delta}^{j}}\prod_{i\in\alpha} \sigma_{i}}{m_{\Omega_{\delta}^{j}}}\right)" />
-where ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20G%5E%7Bi%7D_%7B%5Cdelta%7D) is the site-centric configurational descriptor for site i, for the prototype cluster labeled ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdelta)
+<img src="https://latex.codecogs.com/gif.latex?G^{i}_{\delta}&space;=&space;\left(\frac{\sum_{\alpha\in\Omega_{\delta}^{i}}\prod_{j\in\alpha}&space;\sigma_{j}}{m_{\Omega_{\delta}^{i}}}\right)" title="G^{i}_{\delta} = \left(\frac{\sum_{\alpha\in\Omega_{\delta}^{i}}\prod_{j\in\alpha} \sigma_{j}}{m_{\Omega_{\delta}^{i}}}\right)" />
+
+where ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20G%5E%7Bi%7D_%7B%5Cdelta%7D) is the site-centric configurational descriptor for site i, for a prototype cluster labeled ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdelta). ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5COmega_%7B%5Cdelta%7D%5E%7Bi%7D) is the set of symmetrically equivalent clusters, ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20m_%7B%5COmega_%7B%5Cdelta%7D%5E%7Bi%7D%7D) is the multiplicity of the prototype cluster and ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Csigma_%7Bj%7D) is the occupation function value at site j.
 
 ## Installation
 
