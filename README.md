@@ -1,24 +1,25 @@
 # site-descriptor
 
 This program provides an interface into the [```CASM```](https://github.com/prisms-center/CASMcode) software package to calculate site-centric configurational descriptors. Site-centric configurational descriptors are calculated as :
+
 <img src="https://latex.codecogs.com/gif.latex?G^{i}_{\delta}&space;=&space;\left(\frac{\sum_{\alpha\in\Omega_{\delta}^{i}}\prod_{j\in\alpha}&space;\sigma_{j}}{m_{\Omega_{\delta}^{i}}}\right)" title="G^{i}_{\delta} = \left(\frac{\sum_{\alpha\in\Omega_{\delta}^{i}}\prod_{j\in\alpha} \sigma_{j}}{m_{\Omega_{\delta}^{i}}}\right)" />
 
-where ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20G%5E%7Bi%7D_%7B%5Cdelta%7D) is the site-centric configurational descriptor for site i, for a prototype cluster labeled ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdelta). ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5COmega_%7B%5Cdelta%7D%5E%7Bi%7D) is the set of symmetrically equivalent clusters, ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20m_%7B%5COmega_%7B%5Cdelta%7D%5E%7Bi%7D%7D) is the multiplicity of the prototype cluster and ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Csigma_%7Bj%7D) is the occupation function value at site j.
+where ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20G%5E%7Bi%7D_%7B%5Cdelta%7D) is the site-centric configurational descriptor for site i and a prototype cluster labeled ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdelta). ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5COmega_%7B%5Cdelta%7D%5E%7Bi%7D) is the set of symmetrically equivalent clusters, ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20m_%7B%5COmega_%7B%5Cdelta%7D%5E%7Bi%7D%7D) is the multiplicity of the prototype cluster and ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Csigma_%7Bj%7D) is the occupation function value at site j.
 
 ## Installation
 
-The build system here depends heavily on ```autotools```. Since there is no actual executable, the burden on creating all the Makefiles and configure scripts falls on you. Don't worry! It's easy to set up. You just need to install a few packages:
+The build system here depends heavily on ```autotools```. The following packages are required to enable building this repository with ```autotools```:
 
 * autoconf
 * automake
 * libtool
 * autoconf-archive
 
-These should all be readily available via ```brew``` and ```apt```.
+These should be readily available via ```brew``` and ```apt```.
 
 ### Installing ```CASM``` with ```autotools```
 
-Building and installing the ```CASM``` software package with ```autotools``` is the preferred method. You may need to do additional work if you want to link this tool with ```CASM``` that is installed with ```anaconda``` or other means. Start building by first cloning the ```CASM``` github repository into your computer. Next run the following commands within the cloned ```CASM``` directory:
+Building and installing the ```CASM``` software package with ```autotools``` is the preferred method. You may need to do additional work if you want to link this tool with the ```CASM``` library that is installed through ```anaconda``` or other means. Start building by first cloning the ```CASM``` github repository into your computer. Next run the following commands within the cloned ```CASM``` directory:
 
 ``` sh
 python make_Makemodule.py
@@ -72,8 +73,8 @@ make && make install
 
 ## Running and using ```site-descriptors```
 
-To run the executable you need to ensure that you have three steps completed:
-* Initialize a ```CASM``` project with a ```PRIM```
+To run the executable you need to ensure that you have completed the following three steps:
+* Initialize a ```CASM``` project with a ```PRIM``` or ```prim.json```
 * Enumerate the ```clexulator``` with the ```casm bspecs -u``` command and an appropriate ```bspecs.json``` file in the ```$CASMROOT/basis_sets/bset.default``` folder. Ensure that this file is compiled without any errors when you run this command
 * Select all the configurations that you want to calculate site correlations for with the ```casm select``` command. Only selected configurations will be listed in the final output of this program
 
@@ -108,7 +109,7 @@ This helps identify how the columns of the ```corr_matrix``` may be mapped on to
 
 
 ## Citing
-If you find this tool useful please cite the following paper:
+If you find this tool useful please cite the following paper in addition to the papers listed in main [```CASM```](https://github.com/prisms-center/CASMcode) repository.
 
 ```
 Natarajan, A.R., Van der Ven, A. Machine-learning the configurational energy of multicomponent crystalline solids. npj Comput Mater 4, 56 (2018). https://doi.org/10.1038/s41524-018-0110-y
