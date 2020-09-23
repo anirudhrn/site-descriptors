@@ -1,6 +1,8 @@
 # site-descriptor
 
-This program provides an interface into the [```CASM```](https://github.com/prisms-center/CASMcode) software package to calculate site-centric configurational descriptors. 
+This program provides an interface into the [```CASM```](https://github.com/prisms-center/CASMcode) software package to calculate site-centric configurational descriptors. Site-centric configurational descriptors are calculated as :
+<img src="https://latex.codecogs.com/gif.latex?G^{i}_{\delta}&space;=&space;\left(\frac{\sum_{\alpha\in\Omega_{\delta}^{j}}\prod_{i\in\alpha}&space;\sigma_{i}}{m_{\Omega_{\delta}^{j}}}\right)" title="G^{i}_{\delta} = \left(\frac{\sum_{\alpha\in\Omega_{\delta}^{j}}\prod_{i\in\alpha} \sigma_{i}}{m_{\Omega_{\delta}^{j}}}\right)" />
+where ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20G%5E%7Bi%7D_%7B%5Cdelta%7D) is the site-centric configurational descriptor for site i, for the prototype cluster labeled ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdelta)
 
 ## Installation
 
