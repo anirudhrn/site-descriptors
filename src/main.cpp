@@ -61,9 +61,7 @@ int main(int argc, char *argv[])
     for(auto config_iter = pclex.selected_config_cbegin(); config_iter!=pclex.selected_config_cend(); ++config_iter ){
         auto con_name = config_iter->name();
         cout<<"Working on : "<<con_name<<endl;
-        //Eigen::MatrixXd correlations = correlations_mat_local((*config_iter).configdof(),(*config_iter).get_supercell(),clex);
         data[con_name] = correlations_mat_local((*config_iter).configdof(),(*config_iter).get_supercell(),clex);
-        //data["configs"][con_name]["corr_matrix"] = correlations;        
     }
     data.write(output_correlation_filename);
     return 0;

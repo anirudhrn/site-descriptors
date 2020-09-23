@@ -1,4 +1,4 @@
-# site-descriptor
+# site-descriptors
 
 This program provides an interface into the [```CASM```](https://github.com/prisms-center/CASMcode) software package to calculate site-centric configurational descriptors. Site-centric configurational descriptors are calculated as :
 
@@ -33,7 +33,7 @@ cd build
 .././configure --prefix=$INSTALLDIR CXXFLAGS='-O3 -DNDEBUG'
 ```
 
-where ```$INSTALLDIR``` is an environment variable containing the location where you want to install ```CASM```. This is an important variable to keep around, as we will later link to this directory while building ```site-descriptor```. Configuring your ```CASM``` build may take a few seconds but if you have all the software dependencies available you should not see any error messages and you will be ready to compile the library. To compile and install your library run:
+where ```$INSTALLDIR``` is an environment variable containing the location where you want to install ```CASM```. This is an important variable to keep around, as we will later link to this directory while building ```site-descriptors```. Configuring your ```CASM``` build may take a few seconds but if you have all the software dependencies available you should not see any error messages and you will be ready to compile the library. To compile and install your library run:
 
 ``` sh
 make -j4 install
